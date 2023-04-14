@@ -6,7 +6,7 @@ data.forEach((beer) => {
     let allBeer=" ";
 
     let addBeer =
-    `<div class="col m-2 p-4"><h2><i class="bi bi-heart-arrow"></i>${beer.name}</h2><p class="tag">"${beer.tagline}"</p><h5>Decription:</h5><p>${beer.description}</p>
+    `<div class="col m-2 p-4"><h2><i class="bi bi-heart-arrow"></i>${beer.name}</h2><p class="tag">"${beer.tagline}"</p><img src="${beer.image_url}"><h5>Decription:</h5><p>${beer.description}</p>
     <h6><i class="bi bi-hand-thumbs-up-fill"></i> It's good to pair with:</h6><ul class ="style"><li>${beer.food_pairing[0]}</li><li>${beer.food_pairing[1]}</li><li>${beer.food_pairing[2]}</li></ul>
     <p><span>First brewed:</span> ${beer.first_brewed}</p> <h6><i class="bi bi-star-fill"></i> Tips:</h6><p>"${beer.brewers_tips}"</p></div>`
 
@@ -37,7 +37,10 @@ data.forEach((beer) => {
             .css("opacity","0.8")
             .css("border", "dashed 3px black")
             .css("border-radius", "5px");
-
+    $("img").css("weight", "100px")
+            .css("height","80px")
+            .css("position","relative")
+            .css("margin-left","40%");
 });
 };
 const getData = () => {
